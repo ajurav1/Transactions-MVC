@@ -22,6 +22,7 @@
 		FA6007DA201A7ACB008F5914 /* TransactionDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6007D9201A7ACB008F5914 /* TransactionDataModel.swift */; };
 		FA6007DC201A7C88008F5914 /* TransactionsWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6007DB201A7C88008F5914 /* TransactionsWebService.swift */; };
 		FA6007DE201A7CB4008F5914 /* TransactionsDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6007DD201A7CB4008F5914 /* TransactionsDBService.swift */; };
+		FA6007E0201A7E11008F5914 /* TransactionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6007DF201A7E11008F5914 /* TransactionListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		FA6007D9201A7ACB008F5914 /* TransactionDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDataModel.swift; sourceTree = "<group>"; };
 		FA6007DB201A7C88008F5914 /* TransactionsWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsWebService.swift; sourceTree = "<group>"; };
 		FA6007DD201A7CB4008F5914 /* TransactionsDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsDBService.swift; sourceTree = "<group>"; };
+		FA6007DF201A7E11008F5914 /* TransactionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 		FA6007C9201A75D5008F5914 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FA6007DF201A7E11008F5914 /* TransactionListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				FA6007982019F3CE008F5914 /* TransactionListController.swift in Sources */,
 				FA6007DE201A7CB4008F5914 /* TransactionsDBService.swift in Sources */,
 				FA6007D1201A79DD008F5914 /* DataModelAble.swift in Sources */,
+				FA6007E0201A7E11008F5914 /* TransactionListView.swift in Sources */,
 				FA60079E2019F3CE008F5914 /* Transactions.xcdatamodeld in Sources */,
 				FA6007962019F3CE008F5914 /* AppDelegate.swift in Sources */,
 			);

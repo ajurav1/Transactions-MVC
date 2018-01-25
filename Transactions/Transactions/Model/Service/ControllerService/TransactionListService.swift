@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct TransactionListService: ServiceAble{
+class TransactionListService: NSObject, ServiceAble{
     
 }
