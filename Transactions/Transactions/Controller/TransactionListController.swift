@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TransactionListController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

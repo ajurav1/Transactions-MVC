@@ -36,7 +36,7 @@ Controller layer holds the objrcts of service manager (Model layer) class and vi
 - It maps the data models received from model layer to view model for view layer and vice versa.
 
 
-## Advantages -
+## Advantages
 
 - Highly loosly coupled.
 - Model and view layer are highly reusable.

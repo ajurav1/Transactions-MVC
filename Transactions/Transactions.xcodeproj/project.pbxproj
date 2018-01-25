@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FA6007962019F3CE008F5914 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6007952019F3CE008F5914 /* AppDelegate.swift */; };
-		FA6007982019F3CE008F5914 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6007972019F3CE008F5914 /* ViewController.swift */; };
+		FA6007982019F3CE008F5914 /* TransactionListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6007972019F3CE008F5914 /* TransactionListController.swift */; };
 		FA60079B2019F3CE008F5914 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6007992019F3CE008F5914 /* Main.storyboard */; };
 		FA60079E2019F3CE008F5914 /* Transactions.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA60079C2019F3CE008F5914 /* Transactions.xcdatamodeld */; };
 		FA6007A02019F3CE008F5914 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA60079F2019F3CE008F5914 /* Assets.xcassets */; };
@@ -16,6 +16,12 @@
 		FA6007AE2019F3CE008F5914 /* TransactionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6007AD2019F3CE008F5914 /* TransactionsTests.swift */; };
 		FA6007B92019F3CF008F5914 /* TransactionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6007B82019F3CF008F5914 /* TransactionsUITests.swift */; };
 		FA6007C72019F3DC008F5914 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FA6007C62019F3DC008F5914 /* README.md */; };
+		FA6007D1201A79DD008F5914 /* DataModelAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6007D0201A79DD008F5914 /* DataModelAble.swift */; };
+		FA6007D3201A79EE008F5914 /* ServiceAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6007D2201A79EE008F5914 /* ServiceAble.swift */; };
+		FA6007D8201A7A72008F5914 /* TransactionListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6007D7201A7A72008F5914 /* TransactionListService.swift */; };
+		FA6007DA201A7ACB008F5914 /* TransactionDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6007D9201A7ACB008F5914 /* TransactionDataModel.swift */; };
+		FA6007DC201A7C88008F5914 /* TransactionsWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6007DB201A7C88008F5914 /* TransactionsWebService.swift */; };
+		FA6007DE201A7CB4008F5914 /* TransactionsDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6007DD201A7CB4008F5914 /* TransactionsDBService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +44,7 @@
 /* Begin PBXFileReference section */
 		FA6007922019F3CE008F5914 /* Transactions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Transactions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6007952019F3CE008F5914 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA6007972019F3CE008F5914 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA6007972019F3CE008F5914 /* TransactionListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListController.swift; sourceTree = "<group>"; };
 		FA60079A2019F3CE008F5914 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA60079D2019F3CE008F5914 /* Transactions.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Transactions.xcdatamodel; sourceTree = "<group>"; };
 		FA60079F2019F3CE008F5914 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +57,12 @@
 		FA6007B82019F3CF008F5914 /* TransactionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsUITests.swift; sourceTree = "<group>"; };
 		FA6007BA2019F3CF008F5914 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA6007C62019F3DC008F5914 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		FA6007D0201A79DD008F5914 /* DataModelAble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelAble.swift; sourceTree = "<group>"; };
+		FA6007D2201A79EE008F5914 /* ServiceAble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAble.swift; sourceTree = "<group>"; };
+		FA6007D7201A7A72008F5914 /* TransactionListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListService.swift; sourceTree = "<group>"; };
+		FA6007D9201A7ACB008F5914 /* TransactionDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDataModel.swift; sourceTree = "<group>"; };
+		FA6007DB201A7C88008F5914 /* TransactionsWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsWebService.swift; sourceTree = "<group>"; };
+		FA6007DD201A7CB4008F5914 /* TransactionsDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsDBService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				FA6007C62019F3DC008F5914 /* README.md */,
+				FA6007952019F3CE008F5914 /* AppDelegate.swift */,
 				FA6007942019F3CE008F5914 /* Transactions */,
 				FA6007AC2019F3CE008F5914 /* TransactionsTests */,
 				FA6007B72019F3CF008F5914 /* TransactionsUITests */,
@@ -103,11 +116,9 @@
 			isa = PBXGroup;
 			children = (
 				FA6007CB201A75E5008F5914 /* Utility */,
-				FA6007CA201A75DE008F5914 /* Controller */,
-				FA6007C9201A75D5008F5914 /* View */,
 				FA6007C8201A75CC008F5914 /* Model */,
-				FA6007952019F3CE008F5914 /* AppDelegate.swift */,
-				FA6007972019F3CE008F5914 /* ViewController.swift */,
+				FA6007C9201A75D5008F5914 /* View */,
+				FA6007CA201A75DE008F5914 /* Controller */,
 				FA6007992019F3CE008F5914 /* Main.storyboard */,
 				FA60079F2019F3CE008F5914 /* Assets.xcassets */,
 				FA6007A12019F3CE008F5914 /* LaunchScreen.storyboard */,
@@ -138,6 +149,8 @@
 		FA6007C8201A75CC008F5914 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FA6007CF201A79C5008F5914 /* DataModel */,
+				FA6007CE201A79B5008F5914 /* Service */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -152,6 +165,7 @@
 		FA6007CA201A75DE008F5914 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FA6007972019F3CE008F5914 /* TransactionListController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -161,6 +175,50 @@
 			children = (
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		FA6007CE201A79B5008F5914 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FA6007D2201A79EE008F5914 /* ServiceAble.swift */,
+				FA6007D6201A7A17008F5914 /* ControllerService */,
+				FA6007D5201A7A11008F5914 /* DBService */,
+				FA6007D4201A7A08008F5914 /* WebService */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FA6007CF201A79C5008F5914 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA6007D0201A79DD008F5914 /* DataModelAble.swift */,
+				FA6007D9201A7ACB008F5914 /* TransactionDataModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		FA6007D4201A7A08008F5914 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				FA6007DB201A7C88008F5914 /* TransactionsWebService.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		FA6007D5201A7A11008F5914 /* DBService */ = {
+			isa = PBXGroup;
+			children = (
+				FA6007DD201A7CB4008F5914 /* TransactionsDBService.swift */,
+			);
+			path = DBService;
+			sourceTree = "<group>";
+		};
+		FA6007D6201A7A17008F5914 /* ControllerService */ = {
+			isa = PBXGroup;
+			children = (
+				FA6007D7201A7A72008F5914 /* TransactionListService.swift */,
+			);
+			path = ControllerService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,7 +356,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA6007982019F3CE008F5914 /* ViewController.swift in Sources */,
+				FA6007DA201A7ACB008F5914 /* TransactionDataModel.swift in Sources */,
+				FA6007D8201A7A72008F5914 /* TransactionListService.swift in Sources */,
+				FA6007D3201A79EE008F5914 /* ServiceAble.swift in Sources */,
+				FA6007DC201A7C88008F5914 /* TransactionsWebService.swift in Sources */,
+				FA6007982019F3CE008F5914 /* TransactionListController.swift in Sources */,
+				FA6007DE201A7CB4008F5914 /* TransactionsDBService.swift in Sources */,
+				FA6007D1201A79DD008F5914 /* DataModelAble.swift in Sources */,
 				FA60079E2019F3CE008F5914 /* Transactions.xcdatamodeld in Sources */,
 				FA6007962019F3CE008F5914 /* AppDelegate.swift in Sources */,
 			);
