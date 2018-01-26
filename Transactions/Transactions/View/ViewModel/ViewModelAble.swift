@@ -1,13 +1,11 @@
 //
-//  TransactionListView.swift
+//  ViewModelAble.swift
 //  Transactions
 //
 //  Created by MacBook on 26/01/18.
 //  Copyright © 2018 AbhimanuJindal. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class TransactionListView: UITableView {
-
-}
+protocol ViewModelAble {}
