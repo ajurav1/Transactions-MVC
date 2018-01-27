@@ -10,4 +10,18 @@ import Foundation
 
 class TransactionListService: NSObject, ServiceAble{
     
+    let webservice = TransactionWebService()
+    
+    func getTransactions(){
+        getTransactionsFromServer()
+    }
+    
+    private func getTransactionsFromServer(){
+        webservice.call { (result) in
+            switch result{
+            case .success(let transactions): print(transactions)
+            case .fail(let error): print(error)
+            }
+        }
+    }
 }

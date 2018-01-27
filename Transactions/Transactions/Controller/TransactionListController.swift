@@ -18,6 +18,7 @@ class TransactionListController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         customView = self.view as! TransactionListView
         customView.setUpList()
+        service.getTransactions()
     }
 
     override func didReceiveMemoryWarning() {

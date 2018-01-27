@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		FA36C228201B3427001FCB01 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA36C227201B3427001FCB01 /* Utilities.swift */; };
 		FA36C22A201B3433001FCB01 /* Utilities+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA36C229201B3433001FCB01 /* Utilities+Date.swift */; };
+		FA36C2AA201C4D5B001FCB01 /* WebServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA36C2A9201C4D5B001FCB01 /* WebServiceAPI.swift */; };
+		FA36C2AC201C4D94001FCB01 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA36C2AB201C4D94001FCB01 /* Result.swift */; };
 		FA6007962019F3CE008F5914 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6007952019F3CE008F5914 /* AppDelegate.swift */; };
 		FA6007982019F3CE008F5914 /* TransactionListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6007972019F3CE008F5914 /* TransactionListController.swift */; };
 		FA60079B2019F3CE008F5914 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6007992019F3CE008F5914 /* Main.storyboard */; };
@@ -51,6 +53,8 @@
 /* Begin PBXFileReference section */
 		FA36C227201B3427001FCB01 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		FA36C229201B3433001FCB01 /* Utilities+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utilities+Date.swift"; sourceTree = "<group>"; };
+		FA36C2A9201C4D5B001FCB01 /* WebServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceAPI.swift; sourceTree = "<group>"; };
+		FA36C2AB201C4D94001FCB01 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		FA6007922019F3CE008F5914 /* Transactions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Transactions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6007952019F3CE008F5914 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA6007972019F3CE008F5914 /* TransactionListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListController.swift; sourceTree = "<group>"; };
@@ -104,6 +108,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA36C2A7201C4CD7001FCB01 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				FA36C2A8201C4CE3001FCB01 /* Network */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		FA36C2A8201C4CE3001FCB01 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FA36C2A9201C4D5B001FCB01 /* WebServiceAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		FA6007892019F3CE008F5914 = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +183,7 @@
 		FA6007C8201A75CC008F5914 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FA36C2A7201C4CD7001FCB01 /* Api */,
 				FA6007CF201A79C5008F5914 /* DataModel */,
 				FA6007CE201A79B5008F5914 /* Service */,
 			);
@@ -210,6 +231,7 @@
 		FA6007CF201A79C5008F5914 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				FA36C2AB201C4D94001FCB01 /* Result.swift */,
 				FA6007D0201A79DD008F5914 /* DataModelAble.swift */,
 				FA6007D9201A7ACB008F5914 /* TransactionDataModel.swift */,
 			);
@@ -219,7 +241,7 @@
 		FA6007D4201A7A08008F5914 /* WebService */ = {
 			isa = PBXGroup;
 			children = (
-				FA6007DB201A7C88008F5914 /* TransactionsWebService.swift */,
+				FA6007DD201A7CB4008F5914 /* TransactionsDBService.swift */,
 			);
 			path = WebService;
 			sourceTree = "<group>";
@@ -227,7 +249,7 @@
 		FA6007D5201A7A11008F5914 /* DBService */ = {
 			isa = PBXGroup;
 			children = (
-				FA6007DD201A7CB4008F5914 /* TransactionsDBService.swift */,
+				FA6007DB201A7C88008F5914 /* TransactionsWebService.swift */,
 			);
 			path = DBService;
 			sourceTree = "<group>";
@@ -401,6 +423,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA36C2AC201C4D94001FCB01 /* Result.swift in Sources */,
 				FA6007DA201A7ACB008F5914 /* TransactionDataModel.swift in Sources */,
 				FA6007D8201A7A72008F5914 /* TransactionListService.swift in Sources */,
 				FA6007E4201A82B4008F5914 /* ViewModelAble.swift in Sources */,
@@ -413,6 +436,7 @@
 				FA6007EB201A8B3B008F5914 /* TransactionTableViewCell.swift in Sources */,
 				FA36C22A201B3433001FCB01 /* Utilities+Date.swift in Sources */,
 				FA6007E0201A7E11008F5914 /* TransactionListView.swift in Sources */,
+				FA36C2AA201C4D5B001FCB01 /* WebServiceAPI.swift in Sources */,
 				FA6007E9201A85D2008F5914 /* TransactionListDataSource.swift in Sources */,
 				FA60079E2019F3CE008F5914 /* Transactions.xcdatamodeld in Sources */,
 				FA6007962019F3CE008F5914 /* AppDelegate.swift in Sources */,
