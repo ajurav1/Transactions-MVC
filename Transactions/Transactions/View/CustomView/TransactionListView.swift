@@ -12,8 +12,8 @@ class TransactionListView: UIView {
 
     @IBOutlet private var list: UITableView!
     @IBOutlet private var totalAmountView: UIView!
-    
-    private var transactions: [ViewModelAble] = []{
+    @IBOutlet private var totalAmountLabel: UILabel!
+    private var transactions: [TransactionViewModel] = []{
         didSet{
             if transactions.count > 0{
                 totalAmountView.isHidden = false
@@ -30,10 +30,18 @@ class TransactionListView: UIView {
         list.dataSource = listDataSource
     }
     
-    func reloadList(transactions: [ViewModelAble]){
-        self.transactions = transactions
+    func reloadList(transactions: [TransactionViewModel]?){
+        if let value = transactions{
+            self.transactions = value
+        }
         listDataSource.updateTransactions(transactions: self.transactions)
         list.reloadData()
     }
+    
+    func refreshTotalAmount(amount: AmountViewModel){
+        totalAmountLabel.text = amount.total
+    }
+    
+    
     
 }

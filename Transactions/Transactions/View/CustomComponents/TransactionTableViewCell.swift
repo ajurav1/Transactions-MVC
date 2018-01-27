@@ -22,11 +22,10 @@ class TransactionTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func applyDataFrom(model: ViewModelAble) {
-        guard let transaction = model as? TransactionViewModel else {
-            fatalError("Invalid data applied to TransactionCell")
-        }
-//        self.amountLabel.text = String.init(format: "%0.2f%@", transaction.amount,Constants.currencySymbol)
+    func applyDataFrom(model: TransactionViewModel) {
+        self.amountLabel.text = model.amount
+        self.effectiveDateLabel.text = model.date
+//        transaction.amount,Constants.currencySymbol)
 //        self.amountLabel.textColor =  transaction.amount < 0 ? UIColor.red : UIColor.black
 //        self.descriptionLabel.text = transaction.description
 //        self.effectiveDateLabel.text = "NA"//DateUtility.stringFromDate(date: transation.effectiveDateValue!)

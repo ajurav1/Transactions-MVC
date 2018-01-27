@@ -8,6 +8,11 @@
 
 import Foundation
 
+struct AmountViewModel: ViewModelAble{
+    var total: String
+}
+
 struct TransactionViewModel: ViewModelAble{
-    
+    var date: String
+    var amount: String
 }

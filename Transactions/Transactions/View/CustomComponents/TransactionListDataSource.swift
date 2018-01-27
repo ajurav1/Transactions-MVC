@@ -12,20 +12,12 @@ class TransactionListDataSource: NSObject, UITableViewDataSource{
     
     private var transactions: [TransactionViewModel]
     
-    init(transactions: [ViewModelAble]) {
-        guard let transaction = transactions as? [TransactionViewModel] else {
-            self.transactions = []
-            return
-        }
-        self.transactions = transaction
+    init(transactions: [TransactionViewModel]) {
+        self.transactions = transactions
     }
     
-    func updateTransactions(transactions: [ViewModelAble]){
-        guard let transaction = transactions as? [TransactionViewModel] else {
-            self.transactions = []
-            return
-        }
-        self.transactions = transaction
+    func updateTransactions(transactions: [TransactionViewModel]){
+        self.transactions = transactions
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,6 +25,8 @@ class TransactionListDataSource: NSObject, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell.init()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell") as! TransactionTableViewCell
+        cell.applyDataFrom(model: transactions[indexPath.row])
+        return cell
     }
 }
