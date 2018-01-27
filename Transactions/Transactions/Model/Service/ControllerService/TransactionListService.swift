@@ -12,16 +12,26 @@ class TransactionListService: NSObject, ServiceAble{
     
     let webservice = TransactionWebService()
     
-    func getTransactions(){
-        getTransactionsFromServer()
-    }
-    
-    private func getTransactionsFromServer(){
-        webservice.call { (result) in
+    func getTransactions(completionHandler: @escaping (Result<TransactionWithTotalAmountDataModel, TDError>)->()){
+        getTransactionsFromServer { (result) in
             switch result{
-            case .success(let transactions): print(transactions)
-            case .fail(let error): print(error)
+            case .success(let transactions):
+                let amount = transactions.reduce(0, {$0 + $1.amount})
+                let transactionWithTotal = TransactionWithTotalAmountDataModel.init(transactions: transactions, total: amount)
+                DispatchQueue.main.async {
+                    completionHandler(Result.success(transactionWithTotal))
+                }
+            case .fail(let error):
+                DispatchQueue.main.async {
+                    completionHandler(Result.fail(error))
+                }
             }
         }
     }
+    
+    private func getTransactionsFromServer(completionHandler: @escaping (Result<[TransactionDataModel], TDError>)->()){
+        webservice.call { (result) in
+              completionHandler(result)
+            }
+        }
 }

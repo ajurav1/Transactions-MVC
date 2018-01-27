@@ -8,8 +8,12 @@
 
 import Foundation
 
+struct TransactionWithTotalAmountDataModel{
+    var transactions: [TransactionDataModel]
+    var total: Double
+}
+
 struct TransactionDataModel: Decodable, DataModelAble{
-    
     var id: Int
     var description: String
     var amount: Double

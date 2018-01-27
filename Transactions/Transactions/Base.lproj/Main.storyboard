@@ -58,7 +58,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="63" id="ESD-ZE-2dk" customClass="TransactionTableViewCell" customModule="Tokr" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="63" id="ESD-ZE-2dk" customClass="TransactionTableViewCell" customModule="Transactions" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ESD-ZE-2dk" id="xMO-Jr-yR8">
@@ -114,6 +114,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
                             <outlet property="list" destination="1aL-hg-3va" id="ZtF-rn-zLe"/>
+                            <outlet property="totalAmountView" destination="JVb-xd-EOl" id="vCQ-Jq-gfd"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Transactions" id="iPd-pd-a4b"/>
