@@ -17,26 +17,50 @@ class TransactionListView: UIView {
     @IBOutlet private var list: UITableView!
     @IBOutlet private var totalAmountView: UIView!
     @IBOutlet private var totalAmountLabel: UILabel!
+    @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     
     weak var delegate: TransactionListViewDelegate?
     
-    private var transactions: [TransactionViewModel] = []{
+    enum ViewState {
+        case loading, loaded, noDataFound, errorInLoading, idle
+    }
+    
+    private var viewState: ViewState = .idle{
         didSet{
-            if transactions.count > 0{
-                totalAmountView.isHidden = false
-            }else{
-                totalAmountView.isHidden = true
+            switch viewState {
+            case .loading:
+                activityIndicator.isHidden = false
+                activityIndicator.startAnimating()
+                list.isHidden = true
+            case .loaded:
+                activityIndicator.isHidden = true
+                activityIndicator.stopAnimating()
+                list.isHidden = false
+            default:
+                activityIndicator.isHidden = true
+                activityIndicator.stopAnimating()
+                list.isHidden = true
             }
         }
     }
     
+    private var transactions: [TransactionViewModel] = []
+    
     private var listDataManager = TransactionListDataManager.init(transactions: [])
     
-    func setUpList(){
+    func setUpView(){
+        setUpList()
+    }
+    
+    private func setUpList(){
         transactions = []
         list.dataSource = listDataManager
         list.delegate = listDataManager
         listDataManager.delegate = self
+    }
+    
+    func updateViewState(_ viewState: ViewState){
+        self.viewState = viewState
     }
     
     func reloadList(transactions: [TransactionViewModel]?){
@@ -50,11 +74,9 @@ class TransactionListView: UIView {
     func refreshTotalAmount(amount: AmountViewModel){
         totalAmountLabel.text = amount.total
     }
-    
 }
 
 extension TransactionListView: TransactionListDataManagerDelegate{
-    
     func listDidTapTransaction(transaction: TransactionViewModel) {
         self.delegate?.didTapTransaction(transaction)
     }

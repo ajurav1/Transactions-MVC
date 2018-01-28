@@ -6,22 +6,15 @@
 //  Copyright © 2018 AbhimanuJindal. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct AmountViewModel: ViewModelAble{
     var total: String
 }
 
 struct TransactionViewModel: ViewModelAble{
-    
-    enum TransactionType{
-        case credit
-        case debit
-        case none
-    }
-    
     var date: String
     var amount: String
     var detail: String
-    var transactionType: TransactionType
+    var amountTextColor: UIColor
 }

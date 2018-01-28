@@ -24,11 +24,7 @@ class TransactionTableViewCell: UITableViewCell {
     func applyDataFrom(model: TransactionViewModel) {
         self.amountLabel.text = model.amount
         self.effectiveDateLabel.text = model.date
-        switch model.transactionType {
-        case .credit: self.amountLabel.textColor = UIColor.green
-        case .debit: self.amountLabel.textColor = UIColor.red
-        default: break
-        }
+        self.amountLabel.textColor = model.amountTextColor
     }
 
 }
