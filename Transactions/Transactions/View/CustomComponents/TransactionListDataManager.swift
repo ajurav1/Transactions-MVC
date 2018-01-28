@@ -8,9 +8,14 @@
 
 import UIKit
 
-class TransactionListDataSource: NSObject, UITableViewDataSource{
+protocol TransactionListDataManagerDelegate: class {
+    func listDidTapTransaction(transaction: TransactionViewModel)
+}
+
+class TransactionListDataManager: NSObject, UITableViewDataSource, UITableViewDelegate{
     
     private var transactions: [TransactionViewModel]
+    weak var delegate: TransactionListDataManagerDelegate?
     
     init(transactions: [TransactionViewModel]) {
         self.transactions = transactions
@@ -28,5 +33,10 @@ class TransactionListDataSource: NSObject, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell") as! TransactionTableViewCell
         cell.applyDataFrom(model: transactions[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let transaction = transactions[indexPath.row]
+        self.delegate?.listDidTapTransaction(transaction: transaction)
     }
 }

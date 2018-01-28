@@ -22,5 +22,6 @@ struct TransactionViewModel: ViewModelAble{
     
     var date: String
     var amount: String
+    var detail: String
     var transactionType: TransactionType
 }

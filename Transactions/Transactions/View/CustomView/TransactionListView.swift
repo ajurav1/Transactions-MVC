@@ -8,11 +8,18 @@
 
 import UIKit
 
+protocol TransactionListViewDelegate: class {
+    func didTapTransaction(_ transaction: TransactionViewModel)
+}
+
 class TransactionListView: UIView {
 
     @IBOutlet private var list: UITableView!
     @IBOutlet private var totalAmountView: UIView!
     @IBOutlet private var totalAmountLabel: UILabel!
+    
+    weak var delegate: TransactionListViewDelegate?
+    
     private var transactions: [TransactionViewModel] = []{
         didSet{
             if transactions.count > 0{
@@ -23,18 +30,20 @@ class TransactionListView: UIView {
         }
     }
     
-    private var listDataSource = TransactionListDataSource.init(transactions: [])
+    private var listDataManager = TransactionListDataManager.init(transactions: [])
     
     func setUpList(){
         transactions = []
-        list.dataSource = listDataSource
+        list.dataSource = listDataManager
+        list.delegate = listDataManager
+        listDataManager.delegate = self
     }
     
     func reloadList(transactions: [TransactionViewModel]?){
         if let value = transactions{
             self.transactions = value
         }
-        listDataSource.updateTransactions(transactions: self.transactions)
+        listDataManager.updateTransactions(transactions: self.transactions)
         list.reloadData()
     }
     
@@ -42,6 +51,11 @@ class TransactionListView: UIView {
         totalAmountLabel.text = amount.total
     }
     
+}
+
+extension TransactionListView: TransactionListDataManagerDelegate{
     
-    
+    func listDidTapTransaction(transaction: TransactionViewModel) {
+        self.delegate?.didTapTransaction(transaction)
+    }
 }

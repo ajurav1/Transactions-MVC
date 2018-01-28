@@ -29,7 +29,7 @@
 		FA6007E0201A7E11008F5914 /* TransactionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6007DF201A7E11008F5914 /* TransactionListView.swift */; };
 		FA6007E4201A82B4008F5914 /* ViewModelAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6007E3201A82B4008F5914 /* ViewModelAble.swift */; };
 		FA6007E6201A82C3008F5914 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6007E5201A82C3008F5914 /* TransactionViewModel.swift */; };
-		FA6007E9201A85D2008F5914 /* TransactionListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6007E8201A85D1008F5914 /* TransactionListDataSource.swift */; };
+		FA6007E9201A85D2008F5914 /* TransactionListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6007E8201A85D1008F5914 /* TransactionListDataManager.swift */; };
 		FA6007EB201A8B3B008F5914 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6007EA201A8B3B008F5914 /* TransactionTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,7 +79,7 @@
 		FA6007DF201A7E11008F5914 /* TransactionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListView.swift; sourceTree = "<group>"; };
 		FA6007E3201A82B4008F5914 /* ViewModelAble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelAble.swift; sourceTree = "<group>"; };
 		FA6007E5201A82C3008F5914 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
-		FA6007E8201A85D1008F5914 /* TransactionListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListDataSource.swift; sourceTree = "<group>"; };
+		FA6007E8201A85D1008F5914 /* TransactionListDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListDataManager.swift; sourceTree = "<group>"; };
 		FA6007EA201A8B3B008F5914 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -282,7 +282,7 @@
 		FA6007E7201A85B5008F5914 /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
-				FA6007E8201A85D1008F5914 /* TransactionListDataSource.swift */,
+				FA6007E8201A85D1008F5914 /* TransactionListDataManager.swift */,
 				FA6007EA201A8B3B008F5914 /* TransactionTableViewCell.swift */,
 			);
 			path = CustomComponents;
@@ -437,7 +437,7 @@
 				FA36C22A201B3433001FCB01 /* Utilities+Date.swift in Sources */,
 				FA6007E0201A7E11008F5914 /* TransactionListView.swift in Sources */,
 				FA36C2AA201C4D5B001FCB01 /* WebServiceAPI.swift in Sources */,
-				FA6007E9201A85D2008F5914 /* TransactionListDataSource.swift in Sources */,
+				FA6007E9201A85D2008F5914 /* TransactionListDataManager.swift in Sources */,
 				FA60079E2019F3CE008F5914 /* Transactions.xcdatamodeld in Sources */,
 				FA6007962019F3CE008F5914 /* AppDelegate.swift in Sources */,
 				FA6007E6201A82C3008F5914 /* TransactionViewModel.swift in Sources */,
