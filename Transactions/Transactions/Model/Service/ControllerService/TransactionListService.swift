@@ -16,8 +16,11 @@ class TransactionListService: NSObject, ServiceAble{
         getTransactionsFromServer { (result) in
             switch result{
             case .success(let transactions):
-                let amount = transactions.reduce(0, {$0 + $1.amount})
-                let transactionWithTotal = TransactionWithTotalAmountDataModel.init(transactions: transactions, total: amount)
+                let sortedTransactions = transactions.sorted(by: { (model0, model1) -> Bool in
+                    return (model0.effectiveDateValue?.compare(model1.effectiveDateValue!)) == .orderedAscending
+                })
+                let amount = sortedTransactions.reduce(0, {$0 + $1.amount})
+                let transactionWithTotal = TransactionWithTotalAmountDataModel.init(transactions: sortedTransactions, total: amount)
                 DispatchQueue.main.async {
                     completionHandler(Result.success(transactionWithTotal))
                 }

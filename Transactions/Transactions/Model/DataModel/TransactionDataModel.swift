@@ -19,9 +19,11 @@ struct TransactionDataModel: Decodable, DataModelAble{
     var amount: Double
     var effectiveDate: String
     
-    lazy var effectiveDateValue: Date? = {
-        return Utilities.dateConversion(date: effectiveDate, dateFormat: serverDateFormat())
-    }()
+    var effectiveDateValue: Date?
+    
+    mutating func setupEffectiveDate(){
+        effectiveDateValue = Utilities.dateConversion(date: effectiveDate, dateFormat: serverDateFormat())
+    }
     
     private func serverDateFormat()-> String{
         return "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"

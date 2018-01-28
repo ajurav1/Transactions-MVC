@@ -41,15 +41,14 @@ class TransactionListController: UIViewController {
                 self?.customView.updateViewState(.errorInLoading)
                 self?.displayAlert(title: "Error", message: "Unable to get Transactions")
             }
-            
         }
     }
     
     private func map(model: [TransactionDataModel])-> [TransactionViewModel]{
         return model.map { (dataModel) -> TransactionViewModel in
-            var model = dataModel
+            let model = dataModel
             guard let date = model.effectiveDateValue else{ return
-                TransactionViewModel.init(date: "NA", amount: String.init(format: "%0.2f%@",model.amount,"$"), detail: model.description, amountTextColor: getTransactionColor(amount: 0))
+                TransactionViewModel.init(date: "NA", amount: String.init(format: "%0.2f%@",model.amount,"$"), detail: model.description, amountTextColor: getTransactionColor(amount: model.amount))
             }
             
             return TransactionViewModel.init(date: Utilities.dateConversion(date: date, dateFormat: "dd MMM, yyyy hh:mm a"), amount: String.init(format: "%@ %0.2f","$",abs(model.amount)), detail: model.description, amountTextColor: getTransactionColor(amount: model.amount))

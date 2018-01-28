@@ -21,6 +21,11 @@ class TransactionWebService: ServiceAble{
                 var transaction: [TransactionDataModel]
                 do {
                     transaction = try decoder.decode([TransactionDataModel].self, from: data)
+                    transaction = transaction.map({ (model) -> TransactionDataModel in
+                        var newModel = model
+                        newModel.setupEffectiveDate()
+                        return newModel
+                    })
                     completionHandler(Result.success(transaction))
                 } catch {
                     completionHandler(Result.fail(TDError.init(error)))
