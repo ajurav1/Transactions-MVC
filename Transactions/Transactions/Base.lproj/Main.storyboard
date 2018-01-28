@@ -52,9 +52,11 @@
                                         <constraint firstItem="urS-LN-PfM" firstAttribute="leading" secondItem="JVb-xd-EOl" secondAttribute="leading" id="FwT-DE-sfU"/>
                                         <constraint firstAttribute="trailing" secondItem="l1m-mq-Kxd" secondAttribute="trailing" constant="16" id="KEI-gd-Bdd"/>
                                         <constraint firstItem="VKE-Il-ny4" firstAttribute="centerY" secondItem="JVb-xd-EOl" secondAttribute="centerY" id="QCX-FL-42x"/>
+                                        <constraint firstItem="l1m-mq-Kxd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JVb-xd-EOl" secondAttribute="leading" constant="20" symbolic="YES" id="Qyz-iE-sWh"/>
                                         <constraint firstItem="urS-LN-PfM" firstAttribute="top" secondItem="JVb-xd-EOl" secondAttribute="top" id="YeB-mK-8ag"/>
                                         <constraint firstAttribute="trailing" secondItem="urS-LN-PfM" secondAttribute="trailing" id="itb-BN-Crs"/>
                                         <constraint firstItem="l1m-mq-Kxd" firstAttribute="centerY" secondItem="JVb-xd-EOl" secondAttribute="centerY" id="mgA-S9-ICc"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VKE-Il-ny4" secondAttribute="trailing" constant="20" symbolic="YES" id="yM3-KE-gCx"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
