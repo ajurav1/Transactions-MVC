@@ -31,9 +31,11 @@ Controller layer holds the objrcts of service manager (Model layer) class and vi
 - It communicates with these objects with -
 
 - Direct method call to the respective object public methods.
-- Delegation Pattern / Closures as a callback. (RXSwift can be used, It will be used in MVVM pattern).
+- Delegation Pattern / Closures as a callback. (RXSwift can be used also).
 
 - It maps the data models received from model layer to view model for view layer and vice versa.
+
+- Controller layer always communicates with service manager class to get the required data models and then it will map the data model in required view models. Once view model generated, it will pass the view model to view to update UI components.
 
 
 ## Advantages
