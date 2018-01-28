@@ -13,6 +13,14 @@ struct AmountViewModel: ViewModelAble{
 }
 
 struct TransactionViewModel: ViewModelAble{
+    
+    enum TransactionType{
+        case credit
+        case debit
+        case none
+    }
+    
     var date: String
     var amount: String
+    var transactionType: TransactionType
 }

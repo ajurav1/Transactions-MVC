@@ -24,6 +24,6 @@ struct TransactionDataModel: Decodable, DataModelAble{
     }()
     
     private func serverDateFormat()-> String{
-        return "yyyy-MM-dd'T'HH:mm:ss.Z"
+        return "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
     }
 }

@@ -34,14 +34,22 @@ class TransactionListController: UIViewController {
         return model.map { (dataModel) -> TransactionViewModel in
             var model = dataModel
             guard let date = model.effectiveDateValue else{ return
-                TransactionViewModel.init(date: "NA", amount: String.init(format: "%0.2f%@",model.amount,"$"))
+                TransactionViewModel.init(date: "NA", amount: String.init(format: "%0.2f%@",model.amount,"$"), transactionType: .none)
             }
-            return TransactionViewModel.init(date: Utilities.dateConversion(date: date, dateFormat: "dd mmm, yyyy z"), amount: String.init(format: "%0.2f%@",model.amount,"$"))
+            
+            var transactionType: TransactionViewModel.TransactionType = .none
+            if model.amount < 0{
+                transactionType = .debit
+            }else if model.amount > 0{
+                transactionType = .credit
+            }
+            
+            return TransactionViewModel.init(date: Utilities.dateConversion(date: date, dateFormat: "dd MMM, yyyy hh:mm a"), amount: String.init(format: "%@ %0.2f","$",abs(model.amount)), transactionType: transactionType)
         }
     }
     
     private func map(model: TransactionWithTotalAmountDataModel)-> AmountViewModel{
-        return AmountViewModel.init(total: String.init(format: "%@%0.2f",model.total,"$"))
+        return AmountViewModel.init(total: String.init(format: "%@ %0.2f","$",model.total))
     }
 
     override func didReceiveMemoryWarning() {

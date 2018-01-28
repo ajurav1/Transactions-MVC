@@ -10,13 +10,15 @@ import Foundation
 
 extension Utilities{
     
-    class func dateConversion(date: String, dateFormat: String) -> Date? {
+    static func dateConversion(date: String, dateFormat: String) -> Date? {
         let dateformatter = DateFormatter.init()
         dateformatter.dateFormat = dateFormat
-        return dateformatter.date(from: date)
+        let dateValue = dateformatter.date(from: date)
+        return dateValue
+        
     }
     
-    class func dateConversion(date: Date, dateFormat: String) -> String {
+    static func dateConversion(date: Date, dateFormat: String) -> String {
         let dateformatter = DateFormatter.init()
         dateformatter.dateFormat = dateFormat
         return dateformatter.string(from: date)

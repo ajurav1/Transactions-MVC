@@ -65,16 +65,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="62.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="746" text="ffdsafdsfasfasdfasdfasfdasfasfasfasfasfasd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uu-Ix-Udm">
-                                                    <rect key="frame" x="15" y="11" width="288" height="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="746" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uu-Ix-Udm">
+                                                    <rect key="frame" x="15" y="22" width="288" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgv-ae-HXX">
-                                                    <rect key="frame" x="15" y="36" width="27" height="16"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAP-xU-kCQ">
@@ -86,19 +80,15 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="NAP-xU-kCQ" firstAttribute="trailing" secondItem="xMO-Jr-yR8" secondAttribute="trailingMargin" id="19O-bi-6c3"/>
-                                                <constraint firstItem="3uu-Ix-Udm" firstAttribute="top" secondItem="xMO-Jr-yR8" secondAttribute="topMargin" id="C7L-wR-Es4"/>
+                                                <constraint firstItem="3uu-Ix-Udm" firstAttribute="top" secondItem="xMO-Jr-yR8" secondAttribute="topMargin" constant="11" id="C7L-wR-Es4"/>
                                                 <constraint firstItem="NAP-xU-kCQ" firstAttribute="leading" secondItem="3uu-Ix-Udm" secondAttribute="trailing" constant="8" id="IEH-AK-mQU"/>
-                                                <constraint firstItem="Dgv-ae-HXX" firstAttribute="bottom" secondItem="xMO-Jr-yR8" secondAttribute="bottomMargin" id="IGh-U9-rah"/>
                                                 <constraint firstItem="NAP-xU-kCQ" firstAttribute="centerY" secondItem="xMO-Jr-yR8" secondAttribute="centerY" id="Nej-OG-s3g"/>
-                                                <constraint firstItem="Dgv-ae-HXX" firstAttribute="top" secondItem="3uu-Ix-Udm" secondAttribute="bottom" constant="8" id="ccf-ki-xwA"/>
-                                                <constraint firstItem="Dgv-ae-HXX" firstAttribute="leading" secondItem="xMO-Jr-yR8" secondAttribute="leadingMargin" id="eDR-9L-dai"/>
                                                 <constraint firstItem="3uu-Ix-Udm" firstAttribute="leading" secondItem="xMO-Jr-yR8" secondAttribute="leadingMargin" id="fgf-uJ-Yxh"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="amountLabel" destination="NAP-xU-kCQ" id="RfT-Z6-9nZ"/>
-                                            <outlet property="descriptionLabel" destination="3uu-Ix-Udm" id="7WZ-bw-Ws9"/>
-                                            <outlet property="effectiveDateLabel" destination="Dgv-ae-HXX" id="Y8l-ea-WGu"/>
+                                            <outlet property="effectiveDateLabel" destination="3uu-Ix-Udm" id="BYf-yG-OSm"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -11,7 +11,6 @@ import UIKit
 class TransactionTableViewCell: UITableViewCell {
 
     @IBOutlet private var effectiveDateLabel:UILabel!
-    @IBOutlet private var descriptionLabel:UILabel!
     @IBOutlet private var amountLabel:UILabel!
     
     override func awakeFromNib() {
@@ -25,10 +24,11 @@ class TransactionTableViewCell: UITableViewCell {
     func applyDataFrom(model: TransactionViewModel) {
         self.amountLabel.text = model.amount
         self.effectiveDateLabel.text = model.date
-//        transaction.amount,Constants.currencySymbol)
-//        self.amountLabel.textColor =  transaction.amount < 0 ? UIColor.red : UIColor.black
-//        self.descriptionLabel.text = transaction.description
-//        self.effectiveDateLabel.text = "NA"//DateUtility.stringFromDate(date: transation.effectiveDateValue!)
+        switch model.transactionType {
+        case .credit: self.amountLabel.textColor = UIColor.green
+        case .debit: self.amountLabel.textColor = UIColor.red
+        default: break
+        }
     }
 
 }
