@@ -33,7 +33,7 @@ struct TransactionDataModel: DataModelAble{
 }
 extension TransactionDataModel{
     //overriding, as we need to map transactions after decoding
-    static func getDataModel(_ jsonData: Data, completionHandler: @escaping (Result<dataType, TDError>)->()){
+    static func getDataModel(_ jsonData: Data, completionHandler: (Result<dataType, TDError>)->()){
         let decoder = JSONDecoder()
         do {
             var transactions = try decoder.decode(dataType.self, from: jsonData)
