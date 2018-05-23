@@ -8,4 +8,19 @@
 
 import Foundation
 
-protocol DataModelAble {}
+protocol DataModelAble: Decodable{
+    associatedtype dataType : Decodable
+    static func getDataModel(_ jsonData: Data, completionHandler: @escaping (Result<dataType, TDError>)->())
+}
+extension DataModelAble{
+    //default implementation for decoding
+    static func getDataModel(_ jsonData: Data, completionHandler: @escaping (Result<dataType, TDError>)->()){
+        let decoder = JSONDecoder()
+        do {
+            let apiResponse = try decoder.decode(dataType.self, from: jsonData)
+            completionHandler(Result.success(apiResponse))
+        } catch {
+            completionHandler(Result.fail(TDError.init(error)))
+        }
+    }
+}

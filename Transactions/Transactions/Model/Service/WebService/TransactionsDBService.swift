@@ -17,19 +17,9 @@ class TransactionWebService: ServiceAble{
             switch result{
             case .success(let response):
                 let data = response.resultData as! Data
-                let decoder = JSONDecoder.init()
-                var transaction: [TransactionDataModel]
-                do {
-                    transaction = try decoder.decode([TransactionDataModel].self, from: data)
-                    transaction = transaction.map({ (model) -> TransactionDataModel in
-                        var newModel = model
-                        newModel.setupEffectiveDate()
-                        return newModel
-                    })
-                    completionHandler(Result.success(transaction))
-                } catch {
-                    completionHandler(Result.fail(TDError.init(error)))
-                }
+                TransactionDataModel.getDataModel(data, completionHandler: { (result) in
+                    completionHandler(result)
+                })
             case .fail(let error):
                 completionHandler(Result.fail(error))
             }

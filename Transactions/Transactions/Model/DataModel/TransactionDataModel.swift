@@ -13,7 +13,9 @@ struct TransactionWithTotalAmountDataModel{
     var total: Double
 }
 
-struct TransactionDataModel: Decodable, DataModelAble{
+struct TransactionDataModel: DataModelAble{
+    typealias dataType = [TransactionDataModel]
+    
     var id: Int
     var description: String
     var amount: Double
@@ -29,3 +31,21 @@ struct TransactionDataModel: Decodable, DataModelAble{
         return "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
     }
 }
+extension TransactionDataModel{
+    //overriding, as we need to map transactions after decoding
+    static func getDataModel(_ jsonData: Data, completionHandler: @escaping (Result<dataType, TDError>)->()){
+        let decoder = JSONDecoder()
+        do {
+            var transactions = try decoder.decode(dataType.self, from: jsonData)
+            transactions = transactions.map({ (model) -> TransactionDataModel in
+                var newModel = model
+                newModel.setupEffectiveDate()
+                return newModel
+            })
+            completionHandler(Result.success(transactions))
+        } catch {
+            completionHandler(Result.fail(TDError.init(error)))
+        }
+    }
+}
+
